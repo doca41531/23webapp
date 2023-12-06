@@ -236,8 +236,12 @@ a{
     justify-content: center;
     align-items: center;
 }
+.population-popup-main{
+    
+}
 .population-popup-main>div:nth-child(1){
-    background-color: white;
+    background: linear-gradient( to bottom, #478CF3, #A4D0FF,#d7ebf7 );
+
     width: 70vw;
     height: 80vh;
 }

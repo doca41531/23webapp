@@ -175,8 +175,7 @@ a{
 .map{
     /* 배경 흰색 해 말어 */
     background-color: white;
-    background-image: url(../img/map.png);
-    background-size: 70% 90%;
+    background-image: url(https://cdn.crowdpic.net/detail-thumb/thumb_d_EC3C4DBCCF33B7313E8E221960E5B3E3.png);
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px 40px
@@ -286,6 +285,7 @@ a{
     left: 1400px;
     bottom: 670px;
 }
+
 /* 미세먼지 팝업 */
 .fineDust-popup-wrap{
     position: absolute;

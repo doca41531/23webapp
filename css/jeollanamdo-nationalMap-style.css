@@ -286,6 +286,7 @@ a{
     left: 1400px;
     bottom: 670px;
 }
+
 /* 미세먼지 팝업 */
 .fineDust-popup-wrap{
     position: absolute;

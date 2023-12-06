@@ -24,3 +24,58 @@ population.addEventListener('click', () => {
 close.addEventListener('click', () => {
     population_popup.classList = "population-popup hide"
 })
+
+// 미세먼지 팝업창
+const finedustLeft = document.querySelector(".fineDust-popup-img-left")
+const finedustRight = document.querySelector(".fineDust-popup-img-right")
+const finedustImg = document.querySelector(".fineDust-popup-img")
+const finedustWrap = document.querySelector(".fineDust-popup-wrap")
+const localFinedust = document.querySelector(".local-fineDust")
+const closeFinedust = document.querySelector(".close-finedust")
+let fintdustImgItemNot = document.querySelector(".fineDust-popup-img>div:not(:nth-child(3))");
+let finedustImgItemNotImg = document.querySelector(".fineDust-popup-img>div:not(:nth-child(3))>img");
+let finedustImgItemCenter = document.querySelector(".fineDust-popup-img>div:nth-child(3)")
+let finedustCount = 0;
+let finedustslide = null;
+let finedustCenter = 3;
+finedustImgItemCenter.style.border = "2px solid black"
+
+finedustLeft.addEventListener("click",()=>{
+    finedustImgItemCenter.style.border = "none"
+    finedustCount--
+    finedustCenter--
+    finedustslide = finedustCount*20
+    if(finedustCount === -3){
+        finedustCount = 0;
+        finedustslide = null;
+        finedustCenter = 3;
+    }
+    finedustImg.style.transform = `translate(${-1*finedustslide}%)`
+    finedustImgItemCenter = document.querySelector(`.fineDust-popup-img>div:nth-child(${finedustCenter})`)
+    fintdustImgItemNot = document.querySelector(`.fineDust-popup-img>div:not(:nth-child(${finedustCenter}))`);
+    fintdustImgItemNot.style.border = "none"
+    finedustImgItemCenter.style.border = "2px solid black"
+})
+finedustRight.addEventListener("click",()=>{ 
+    finedustImgItemCenter.style.border = "none"
+    finedustCount++
+    finedustCenter++
+    finedustslide = finedustCount*20
+    if(finedustCount === 3){
+        finedustCount = 0;
+        finedustslide = null;
+        finedustCenter = 3;
+    }
+    finedustImg.style.transform = `translate(${-1*finedustslide}%)`
+    finedustImgItemCenter = document.querySelector(`.fineDust-popup-img>div:nth-child(${finedustCenter})`)
+    fintdustImgItemNot = document.querySelector(`.fineDust-popup-img>div:not(:nth-child(${finedustCenter}))`);
+    fintdustImgItemNot.style.border = "none"
+    finedustImgItemCenter.style.border = "2px solid black"
+    
+})
+localFinedust.addEventListener("click",()=>{
+    finedustWrap.style.display = "flex"
+})
+closeFinedust.addEventListener('click', () => {
+    finedustWrap.style.display = "none"
+})
