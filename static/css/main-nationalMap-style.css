@@ -30,7 +30,9 @@ a{
     justify-content: space-around;
     /* align-items: center; */
 }
-
+.local-weather-today>div:nth-child(2){
+    display: flex;
+}
 
 .local-item-wrap{
     display: flex;
