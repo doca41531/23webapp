@@ -30,9 +30,7 @@ a{
     justify-content: space-around;
     /* align-items: center; */
 }
-.local-weather-today>div:nth-child(2){
-    display: flex;
-}
+
 
 .local-item-wrap{
     display: flex;
@@ -43,7 +41,7 @@ a{
 
 .local-item-wrap>div{
     background-color: white;
-    width: 100%;
+    width: 15vw;
     height: auto;
     padding: 10px 0px;
    
@@ -177,7 +175,7 @@ a{
 .map{
     /* 배경 흰색 해 말어 */
     background-color: white;
-    background-image: url(/img/map.png);
+    background-image: url(../img/map.png);
     background-size: 70% 90%;
     background-repeat: no-repeat;
     background-position: center;
