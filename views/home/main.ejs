@@ -17,28 +17,26 @@
                     <div class="local-title">
                         <img class="weather-img" src="/img/local-sun.png" alt="태양 이미지">
                         <p class="local-name">서울</p>
-                    </div>  
+                    </div>
                     <div class="local-weather-today">
                         <div class="local-weather-today-sectione1">
                             <p class="local-weather-now-temperature">현재 기온 : n도</p>
                             <p class="local-weather-now-humidity">현재 습도 : n%</p>
                         </div>
-                        <div>
-                            <p class="local-weather-today-now">현재 날씨 : 불러오는중</p>
-                            <!-- <p>현재 강수 형태 : 없음</p> -->
-                        </div>
+                        <p class="local-weather-today-now">현재 날씨 : 맑음</p>
                         <p class="local-weather-oneLineReview">날씨가 정말 맑네요</p>
                     </div>
                 </div>
+
                 <!-- 지역 미세먼지 정보 -->
                 <div class="local-fineDust">
                     <div class="local-title">
                         <img class="fineDust-img" src="/img/fineDust-good.png" alt="미세먼지 좋음 이미지">
-                        <p class="local-name">서울</p>
+                        <p class="local-name">전국</p>
                     </div>
                     <div class="local-fineDust-today">
                         <div class="local-fineDust-today-sectione1">
-                            <p class="local-fineDust-today-density">미세먼지 농도 : PM</p>
+                            <p class="local-fineDust-today-density">미세먼지 농도 : nPM</p>
                             <p class="local-fineDust-today-state">현재 미세먼지 상태 : 좋음</p>
                             <p class="local-fineDust-today-oneLineReview">미세먼지가 좋네요</p>
                         </div>
@@ -178,19 +176,19 @@
                     <i class="fa-solid fa-caret-up"></i>
                 </div>
                 <ul class="map-select-list hide">
-                    <a href="#"><li class="map-select-item">서울</li></a>
-                    <a href="#"><li class="map-select-item">인천</li></a>
-                    <a href="#"><li class="map-select-item">강원도</li></a>
-                    <a href="#"><li class="map-select-item">충청남도</li></a>
-                    <a href="#"><li class="map-select-item">충청북도</li></a>
-                    <a href="#"><li class="map-select-item">대전</li></a>
-                    <a href="#"><li class="map-select-item">경상북도</li></a>
-                    <a href="#"><li class="map-select-item">전라북도</li></a>
-                    <a href="#"><li class="map-select-item">대구</li></a>
-                    <a href="#"><li class="map-select-item">경산북도</li></a>
-                    <a href="#"><li class="map-select-item">울산</li></a>
-                    <a href="#"><li class="map-select-item">부산</li></a>
-                    <a href="#"><li class="map-select-item">제주도</li></a>
+                    <a><li class="map-select-item">서울</li></a>
+                    <a href="/html/Incheon-nationalMap.html"><li class="map-select-item">인천</li></a>
+                    <a href="gangwondo-nationalMap.html"><li class="map-select-item">강원도</li></a>
+                    <a href="chungcheongnamdo-nationalMap.html"><li class="map-select-item">충청남도</li></a>
+                    <a href="chungcheongbukdo-nationalMap.html"><li class="map-select-item">충청북도</li></a>
+                    <a href="daejeon-nationalMap.html"><li class="map-select-item">대전</li></a>
+                    <a href="gyeongsangbukdo-nationalMap.html"><li class="map-select-item">경상북도</li></a>
+                    <a href="jeollabukdo-nationalMap.html"><li class="map-select-item">전라북도</li></a>
+                    <a href="daegu-nationalMap.html"><li class="map-select-item">대구</li></a>
+                    <a href="gyeongsangbukdo-nationalMap.html"><li class="map-select-item">경산북도</li></a>
+                    <a href="ulsan-nationalMap.html"><li class="map-select-item">울산</li></a>
+                    <a href="busan-nationalMap.html"><li class="map-select-item">부산</li></a>
+                    <a href="jejudo-nationalMap.html"><li class="map-select-item">제주도</li></a>
                 </ul>
             </div>
             
@@ -205,18 +203,18 @@
                 <div>
                     <div>
                         <div class="population-gkq">
-                            <span>총 대한민국 인구수 : 불러오는중</span>
+                            <span>총 대한민국 인구수 : 51,744,876명</span>
                         </div>
                         <div class="population-male">
-                            <span>총 대한민국 남성 인구수 : 불러오는중</span>
+                            <span>총 대한민국 남성 인구수 : 51,744,876명</span>
                         </div>
                     </div>
                     <div>
                         <div class="population-female">
-                            <span>총 대한민국 여성 인구수 : 불러오는중</span>
+                            <span>총 대한민국 여성 인구수 : 51,744,876명</span>
                         </div>
                         <div class="population-wnxor">
-                            <span>총 대한민국 주택수 : 불러오는중</span>
+                            <span>총 대한민국 주택수 : 51,744,876명</span>
                         </div>
                     </div>
                 </div>
@@ -226,10 +224,44 @@
             </div>
         </div>
     </div>
+    <div class="fineDust-popup-wrap">
+        <div class="fineDust-popup">
+            <p>미세먼지 농도</p>
+            <div class="fineDust-popup-img">
+                <div class="fineDust-popup-img-item">
+                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
+                    <span>1서울</span>
+                </div>
+                <div class="fineDust-popup-img-item">
+                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
+                    <span>2서울</span>
+                </div>
+                <div class="fineDust-popup-img-item">
+                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
+                    <span>3중앙</span>
+                </div>
+                <div class="fineDust-popup-img-item">
+                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
+                    <span>4서울</span>
+                </div>
+                <div class="fineDust-popup-img-item">
+                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
+                    <span>5서울</span>
+                </div>    
+            </div>
+            <div class="fineDust-popup-img-right"></div>
+            <div class="fineDust-popup-img-left"></div>
+            <div class="close-finedust">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
     <script src="/script/script.js"></script>
     <script src="/js/home/index.js"></script>
+    <script src="/js/home/move.js"></script>
     <script src="/js/home/script.js"></script>
     <script src="/js/home/sky.js"></script>
     <script src="/js/home/dlsrn.js"></script>
 </body>
 </html>
+>>>>>>> a9aed3ee49674f3829222a84fffa04b4affa2115
