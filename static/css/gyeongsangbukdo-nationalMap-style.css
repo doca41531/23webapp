@@ -219,10 +219,6 @@ a{
     background-color: aliceblue;
     text-decoration: underline;
 }
-
-/* .map-select:hover+.map-select-list,.map-select-list:hover{
-    height: 465px;
-} */
 .population-popup{
     background-color: rgba(0, 0, 0, 0.331);
     position: absolute;
