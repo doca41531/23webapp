@@ -175,7 +175,7 @@ a{
 .map{
     /* 배경 흰색 해 말어 */
     background-color: white;
-    background-image: url(/img/광주시_백지도S-removebg-preview.png);
+    background-image: url(/views/img/광주시_백지도S-removebg-preview.png);
     background-size: 70% 90%;
     background-repeat: no-repeat;
     background-position: center;
@@ -324,7 +324,7 @@ a{
     background-color: rgb(209, 209, 209);
     position: absolute;
     left: 300px;
-    background-image: url(/img/left-arrow.png);
+    background-image: url(/views/img/left-arrow.png);
     background-size: 70% 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -338,7 +338,7 @@ a{
     background-color: rgb(209, 209, 209);
     position: absolute;
     right: 300px;
-    background-image: url(/img/right-arrow.png);
+    background-image: url(/views/img/right-arrow.png);
     background-size: 70% 70%;
     background-repeat: no-repeat;
     background-position: center;
