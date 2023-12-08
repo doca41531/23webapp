@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding Service</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>
+      let map;
+      let marker;
+      let geocoder;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 8,
+          center: { lat: -34.397, lng: 150.644 },
+          mapTypeControl: false,
+        });
+        geocoder = new google.maps.Geocoder();
+
+        marker = new google.maps.Marker({
+          map,
+        });
+
+        // "서울특별시" 주소를 하드코딩하여 초기화
+        const address = "서울특별시";
+        
+        // 결과 콘솔 출력
+        console.log("Hardcoded Address:", address);
+        geocode({ address: address });
+      }
+
+      function geocode(request) {
+        geocoder
+          .geocode(request)
+          .then((result) => {
+            console.log("Geocoding Result:", result);
+            const { results } = result;
+            if (results.length > 0) {
+              const location = results[0].geometry.location;
+              map.setCenter(location);
+              marker.setPosition(location);
+              marker.setMap(map);
+              console.log("Latitude:", location.lat());
+              console.log("Longitude:", location.lng());
+            } else {
+              console.error("No results found for the given address.");
+            }
+          })
+          .catch((e) => {
+            console.error("Geocode was not successful for the following reason:", e);
+          });
+      }
+
+      window.initMap = initMap;
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>

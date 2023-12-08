@@ -44,12 +44,13 @@ finedustLeft.addEventListener("click",()=>{
     finedustImgItemCenter.style.border = "none"
     finedustCount--
     finedustCenter--
-    finedustslide = finedustCount*20
     if(finedustCount === -3){
-        finedustCount = 0;
+        finedustCount = 2;
         finedustslide = null;
-        finedustCenter = 3;
+        finedustCenter = 5;
     }
+    finedustslide = finedustCount*20
+    
     finedustImg.style.transform = `translate(${-1*finedustslide}%)`
     finedustImgItemCenter = document.querySelector(`.fineDust-popup-img>div:nth-child(${finedustCenter})`)
     fintdustImgItemNot = document.querySelector(`.fineDust-popup-img>div:not(:nth-child(${finedustCenter}))`);
@@ -60,12 +61,14 @@ finedustRight.addEventListener("click",()=>{
     finedustImgItemCenter.style.border = "none"
     finedustCount++
     finedustCenter++
-    finedustslide = finedustCount*20
+    console.log(finedustCount)
     if(finedustCount === 3){
-        finedustCount = 0;
+        finedustCount = -2;
         finedustslide = null;
-        finedustCenter = 3;
+        finedustCenter = 1;
     }
+    finedustslide = finedustCount*20
+    
     finedustImg.style.transform = `translate(${-1*finedustslide}%)`
     finedustImgItemCenter = document.querySelector(`.fineDust-popup-img>div:nth-child(${finedustCenter})`)
     fintdustImgItemNot = document.querySelector(`.fineDust-popup-img>div:not(:nth-child(${finedustCenter}))`);

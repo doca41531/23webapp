@@ -215,6 +215,7 @@ a{
 .map-select-item{
     padding: 5px 0px;
     border-top: 1px solid rgba(0, 0, 0, 0.293);
+    cursor: pointer;
 }
 
 .map-select-item:hover{

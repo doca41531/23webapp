@@ -1,6 +1,6 @@
-const allUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/population.json?accessToken=213cb98c-90a5-468c-b3ea-66acb3878d72&year=2022&low_search=1"
-const menUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/searchpopulation.json?year=2022&gender=1&accessToken=213cb98c-90a5-468c-b3ea-66acb3878d72"
-const ditjdUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/searchpopulation.json?year=2022&gender=2&accessToken=213cb98c-90a5-468c-b3ea-66acb3878d72";
+const allUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/population.json?accessToken=e862dd05-e919-48e2-9d2f-001831f9b5a4&year=2022&low_search=1"
+const menUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/searchpopulation.json?year=2022&gender=1&accessToken=e862dd05-e919-48e2-9d2f-001831f9b5a4"
+const ditjdUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/searchpopulation.json?year=2022&gender=2&accessToken=e862dd05-e919-48e2-9d2f-001831f9b5a4";
 const population_gkq = document.querySelector(".population-gkq > span")
 const population_male = document.querySelector(".population-male > span")
 const population_female = document.querySelector(".population-female > span")

@@ -176,19 +176,23 @@
                     <i class="fa-solid fa-caret-up"></i>
                 </div>
                 <ul class="map-select-list hide">
-                    <a href="seoul-nationalMap.html"><li class="map-select-item">서울</li></a>
-                    <a href="incheon-nationalMap.html"><li class="map-select-item">인천</li></a>
-                    <a href="gangwondo-nationalMap.html"><li class="map-select-item">강원도</li></a>
-                    <a href="chungcheongnamdo-nationalMap.html"><li class="map-select-item">충청남도</li></a>
-                    <a href="chungcheongbukdo-nationalMap.html"><li class="map-select-item">충청북도</li></a>
-                    <a href="daejeon-nationalMap.html"><li class="map-select-item">대전</li></a>
-                    <a href="gyeongsangbukdo-nationalMap.html"><li class="map-select-item">경상북도</li></a>
-                    <a href="jeollabukdo-nationalMap.html"><li class="map-select-item">전라북도</li></a>
-                    <a href="daegu-nationalMap.html"><li class="map-select-item">대구</li></a>
-                    <a href="gyeongsangbukdo-nationalMap.html"><li class="map-select-item">경산북도</li></a>
-                    <a href="ulsan-nationalMap.html"><li class="map-select-item">울산</li></a>
-                    <a href="busan-nationalMap.html"><li class="map-select-item">부산</li></a>
-                    <a href="jejudo-nationalMap.html"><li class="map-select-item">제주도</li></a>
+                    <li class="map-select-item">전국</li>
+                    <li class="map-select-item">서울</li>
+                    <li class="map-select-item">인천</li>
+                    <li class="map-select-item">강원도</li>
+                    <li class="map-select-item">충청남도</li>
+                    <li class="map-select-item">충청북도</li>
+                    <li class="map-select-item">세종</li>
+                    <li class="map-select-item">대전</li>
+                    <li class="map-select-item">경상북도</li>
+                    <li class="map-select-item">경상남도</li>
+                    <li class="map-select-item">전라북도</li>
+                    <li class="map-select-item">전라남도</li>
+                    <li class="map-select-item">광주</li>
+                    <li class="map-select-item">대구</li>
+                    <li class="map-select-item">울산</li>
+                    <li class="map-select-item">부산</li>
+                    <li class="map-select-item">제주도</li>
                 </ul>
             </div>
             
@@ -256,6 +260,63 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>
+      let map;
+      let marker;
+      let geocoder;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 8,
+          center: { lat: -34.397, lng: 150.644 },
+          mapTypeControl: false,
+        });
+        geocoder = new google.maps.Geocoder();
+
+        marker = new google.maps.Marker({
+          map,
+        });
+
+        // "서울특별시" 주소를 하드코딩하여 초기화
+        const address = "서울특별시대구광역시 중구 삼덕동2가 149-6";
+        
+        // 결과 콘솔 출력
+        console.log("Hardcoded Address:", address);
+        geocode({ address: address });
+      }
+
+      function geocode(request) {
+        geocoder
+          .geocode(request)
+          .then((result) => {
+            console.log("Geocoding Result:", result);
+            const { results } = result;
+            if (results.length > 0) {
+              const location = results[0].geometry.location;
+              map.setCenter(location);
+              marker.setPosition(location);
+              marker.setMap(map);
+              console.log("Latitude:", location.lat());
+              console.log("Longitude:", location.lng());
+            } else {
+              console.error("No results found for the given address.");
+            }
+          })
+          .catch((e) => {
+            console.error("Geocode was not successful for the following reason:", e);
+          });
+      }
+
+      window.initMap = initMap;
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjsYjqri3m9vnlGn849qL39UYe0fwu-vs&callback=initMap&v=weekly"
+      defer
+    ></script>
     <script src="/script/script.js"></script>
+    <script src="/js/home/eornaktwlq.js"></script>
+    <script src="/js/home/move.js"></script>
 </body>
 </html>
