@@ -55,7 +55,7 @@ app.get("/Incheon", (req,res) => {
 app.get("/jeollabukdo", (req,res) => {
     res.render("home/jeollabukdo")
 })
-app.get("/jeollanamdo", (req,res) => {
+app.get("/jeollanam_do", (req,res) => {
     res.render("home/jeollanamdo")
 })
 app.get("/sejong", (req,res) => {

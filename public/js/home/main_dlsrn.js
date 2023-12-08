@@ -1,6 +1,7 @@
-const allUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/population.json?accessToken=e862dd05-e919-48e2-9d2f-001831f9b5a4&year=2022&low_search=1"
-const menUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/searchpopulation.json?year=2022&gender=1&accessToken=e862dd05-e919-48e2-9d2f-001831f9b5a4"
-const ditjdUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/searchpopulation.json?year=2022&gender=2&accessToken=e862dd05-e919-48e2-9d2f-001831f9b5a4";
+const allUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/population.json?accessToken=76ab0ccd-ebb8-420a-b2f7-19f7bb28dfa3&year=2022&low_search=1"
+const menUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/searchpopulation.json?year=2022&gender=1&accessToken=76ab0ccd-ebb8-420a-b2f7-19f7bb28dfa3"
+const ditjdUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/searchpopulation.json?year=2022&gender=2&accessToken=76ab0ccd-ebb8-420a-b2f7-19f7bb28dfa3";
+//accessToken 4시간마다 갱신해주기
 const population_gkq = document.querySelector(".population-gkq > span")
 const population_male = document.querySelector(".population-male > span")
 const population_female = document.querySelector(".population-female > span")

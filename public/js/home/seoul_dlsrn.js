@@ -1,5 +1,6 @@
-const url = "https://sgisapi.kostat.go.kr/OpenAPI3/startupbiz/mfratiosummary.json?accessToken=e7575cb2-c53c-41ec-9c80-1661e213550b&adm_cd=11040"
-const allUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/population.json?accessToken=e7575cb2-c53c-41ec-9c80-1661e213550b&year=2022&low_search=1"
+const url = "https://sgisapi.kostat.go.kr/OpenAPI3/startupbiz/mfratiosummary.json?accessToken=76ab0ccd-ebb8-420a-b2f7-19f7bb28dfa3&adm_cd=11040"
+const allUrl = "https://sgisapi.kostat.go.kr/OpenAPI3/stats/population.json?accessToken=76ab0ccd-ebb8-420a-b2f7-19f7bb28dfa3&year=2022&low_search=1"
+//accessToken 4시간마다 갱신해주기
 const population_gkq = document.querySelector(".population-gkq > span")
 const population_male = document.querySelector(".population-male > span")
 const population_female = document.querySelector(".population-female > span")

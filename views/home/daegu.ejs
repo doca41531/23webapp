@@ -16,6 +16,7 @@
                 <div class="local-weather">
                     <div class="local-title">
                         <img class="weather-img" src="/img/local-sun.png" alt="태양 이미지">
+                        
                         <p class="local-name">대구</p>
                     </div>
                     <div class="local-weather-today">
@@ -24,7 +25,6 @@
                             <p class="local-weather-now-humidity">현재 습도 : n%</p>
                         </div>
                         <p class="local-weather-today-now">현재 날씨 : 맑음</p>
-                        <p class="local-weather-oneLineReview">날씨가 정말 맑네요</p>
                     </div>
                 </div>
 
@@ -32,37 +32,18 @@
                 <div class="local-fineDust">
                     <div class="local-title">
                         <img class="fineDust-img" src="/img/fineDust-good.png" alt="미세먼지 좋음 이미지">
-                        <p class="local-name">서울</p>
+                        <p class="local-name">대구</p>
                     </div>
                     <div class="local-fineDust-today">
                         <div class="local-fineDust-today-sectione1">
                             <p class="local-fineDust-today-density">미세먼지 농도 : nPM</p>
                             <p class="local-fineDust-today-state">현재 미세먼지 상태 : 좋음</p>
-                            <p class="local-fineDust-today-oneLineReview">미세먼지가 좋네요</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- 오늘의 추천 지역 -->
-                <div class="local-introduction">
-                    <div class="local-introduction-title">
-                        <div class="local-introduction-img-wrap">
-                            <img class="fineDust-introduction-img" src="/img/fineDust-good.png" alt="미세먼지 농도 이미지">
-                            <img class="weather-introduction-img" src="/img/local-sun.png" alt="태양 이미지">
-                        </div>
-                        <p class="local-introduction-name">인천</p>
-                    </div>
-                    <div class="local-introduction-today">
-                        <div class="local-introduction-today-sectione1">
-                            <p class="local-introduction-today-name">오늘의 추천 지역 : 인천</p>
-                            <p class="local-introduction-today-weather">날씨 : 맑음</p>
-                            <p class="local-introduction-today-fineDust">미세먼지 농도 : 좋음</p>
-                            <p class="local-introduction-today-oneLineReview">미세먼지도 적고 날씨도 좋네요</p>
-                        </div>
-                        
-                    </div>
-                </div>
-
+                
                 <!-- 지역 인구수 -->
                 <button class="local-population">대한민국 현재 인구</button>
             </section>
@@ -168,11 +149,11 @@
         <section class="map">
             <div class="map-select-wrap">
                 <div class="map-select">
-                    <span>지역 선택</span>
+                    <span>대구</span>
                     <i class="fa-solid fa-sort-down" style="color: #000000;"></i>
                 </div>
                 <div class="map-select-up hide">
-                    <span>지역 선택</span>
+                    <span>대구</span>
                     <i class="fa-solid fa-caret-up"></i>
                 </div>
                 <ul class="map-select-list hide">
@@ -228,95 +209,10 @@
             </div>
         </div>
     </div>
-    <div class="fineDust-popup-wrap">
-        <div class="fineDust-popup">
-            <p>미세먼지 농도</p>
-            <div class="fineDust-popup-img">
-                <div class="fineDust-popup-img-item">
-                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
-                    <span>1서울</span>
-                </div>
-                <div class="fineDust-popup-img-item">
-                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
-                    <span>2서울</span>
-                </div>
-                <div class="fineDust-popup-img-item">
-                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
-                    <span>3중앙</span>
-                </div>
-                <div class="fineDust-popup-img-item">
-                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
-                    <span>4서울</span>
-                </div>
-                <div class="fineDust-popup-img-item">
-                    <img src="/img/fineDust-good.png" alt="미세먼지 농도">
-                    <span>5서울</span>
-                </div>    
-            </div>
-            <div class="fineDust-popup-img-right"></div>
-            <div class="fineDust-popup-img-left"></div>
-            <div class="close-finedust">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-        </div>
-    </div>
-    
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script>
-      let map;
-      let marker;
-      let geocoder;
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 8,
-          center: { lat: -34.397, lng: 150.644 },
-          mapTypeControl: false,
-        });
-        geocoder = new google.maps.Geocoder();
-
-        marker = new google.maps.Marker({
-          map,
-        });
-
-        // "서울특별시" 주소를 하드코딩하여 초기화
-        const address = "서울특별시대구광역시 중구 삼덕동2가 149-6";
-        
-        // 결과 콘솔 출력
-        console.log("Hardcoded Address:", address);
-        geocode({ address: address });
-      }
-
-      function geocode(request) {
-        geocoder
-          .geocode(request)
-          .then((result) => {
-            console.log("Geocoding Result:", result);
-            const { results } = result;
-            if (results.length > 0) {
-              const location = results[0].geometry.location;
-              map.setCenter(location);
-              marker.setPosition(location);
-              marker.setMap(map);
-              console.log("Latitude:", location.lat());
-              console.log("Longitude:", location.lng());
-            } else {
-              console.error("No results found for the given address.");
-            }
-          })
-          .catch((e) => {
-            console.error("Geocode was not successful for the following reason:", e);
-          });
-      }
-
-      window.initMap = initMap;
-    </script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjsYjqri3m9vnlGn849qL39UYe0fwu-vs&callback=initMap&v=weekly"
-      defer
-    ></script>
-    <script src="/script/script.js"></script>
-    <script src="/js/home/eornaktwlq.js"></script>
+    <script src="/script/script copy.js"></script>
     <script src="/js/home/move.js"></script>
+    <script src="/js/home/daegu_dlsrn.js"></script>
+    <script src="/js/home/daegu_script.js"></script>
+    <script src="/js/home/daegu_sky.js"></script>
 </body>
 </html>
