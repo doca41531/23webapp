@@ -17,53 +17,53 @@ const busan = document.querySelector(".map-select-list> li:nth-child(16)")
 const jejudo = document.querySelector(".map-select-list> li:nth-child(17)")
 
 all.addEventListener("click", () => {
-    location.href = "/"
+    location.href = "2023webapp/"
 })
 seoul.addEventListener("click", () => {
-    location.href = "/seoul"
+    location.href = "2023webapp/seoul"
 })
 Incheon.addEventListener("click", () => {
-    location.href = "/Incheon"
+    location.href = "2023webapp/Incheon"
 })
 gangwondo.addEventListener("click", () => {
-    location.href = "/gangwondo"
+    location.href = "2023webapp/gangwondo"
 })
 chungcheongnamdo.addEventListener("click", () => {
-    location.href = "/chungcheongnamdo"
+    location.href = "2023webapp/chungcheongnamdo"
 })
 chungcheongbukdo.addEventListener("click", () => {
-    location.href = "/chungcheongbukdo"
+    location.href = "2023webapp/chungcheongbukdo"
 })
 Sejong.addEventListener("click", () => {
-    location.href = "/Sejong"
+    location.href = "2023webapp/Sejong"
 })
 daejeon.addEventListener("click", () => {
-    location.href = "/daejeon"
+    location.href = "2023webapp/daejeon"
 })
 gyeongsangbukdo.addEventListener("click", () => {
-    location.href = "/gyeongsangbukdo"
+    location.href = "2023webapp/gyeongsangbukdo"
 })
 gyeongsangnamdo.addEventListener("click", () => {
-    location.href = "/gyeongsangnamdo"
+    location.href = "2023webapp/gyeongsangnamdo"
 })
 jeollabukdo.addEventListener("click", () => {
-    location.href = "/jeollabukdo"
+    location.href = "2023webapp/jeollabukdo"
 })
 Jeollanam_do.addEventListener("click", () => {
-    location.href = "/Jeollanam_do"
+    location.href = "2023webapp/Jeollanam_do"
 })
 gwangju.addEventListener("click", () => {
-    location.href = "/gwangju"
+    location.href = "2023webapp/gwangju"
 })
 daegu.addEventListener("click", () => {
-    location.href = "/daegu"
+    location.href = "2023webapp/daegu"
 })
 ulsan.addEventListener("click", () => {
-    location.href = "/ulsan"
+    location.href = "2023webapp/ulsan"
 })
 busan.addEventListener("click", () => {
-    location.href = "/busan"
+    location.href = "2023webapp/busan"
 })
 jejudo.addEventListener("click", () => {
-    location.href = "/jejudo"
+    location.href = "2023webapp/jejudo"
 })
