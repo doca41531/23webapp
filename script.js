@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 app.set("views", "./views")
 app.set("view engine", "ejs")
 
-app.get("2023webapp/", (req,res) => {
+app.get("https://port-0-node-express-dr3h12alpwsgmv9.sel4.cloudtype.app/", (req,res) => {
     res.render("home/main")
 })
 app.get("2023webapp/seoul", (req,res) => {
