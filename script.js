@@ -10,58 +10,58 @@ const __dirname = path.dirname(__filename);
 app.set("views", "./views")
 app.set("view engine", "ejs")
 
-app.get("https://port-0-node-express-dr3h12alpwsgmv9.sel4.cloudtype.app/", (req,res) => {
+app.get("/", (req,res) => {
     res.render("home/main")
 })
-app.get("2023webapp/seoul", (req,res) => {
+app.get("/seoul", (req,res) => {
     res.render("home/seoul")
 })
-app.get("2023webapp/busan", (req,res) => {
+app.get("/busan", (req,res) => {
     res.render("home/busan")
 })
-app.get("2023webapp/chungcheongbukdo", (req,res) => {
+app.get("/chungcheongbukdo", (req,res) => {
     res.render("home/chungcheongbukdo")
 })
-app.get("2023webapp/chungcheongnamdo", (req,res) => {
+app.get("/chungcheongnamdo", (req,res) => {
     res.render("home/chungcheongnamdo")
 }) 
-app.get("2023webapp/daegu", (req,res) => {
+app.get("/daegu", (req,res) => {
     res.render("home/daegu")
 })
-app.get("2023webapp/Daejeon", (req,res) => {
+app.get("/Daejeon", (req,res) => {
     res.render("home/Daejeon")
 })
-app.get("2023webapp/gangwondo", (req,res) => {
+app.get("/gangwondo", (req,res) => {
     res.render("home/gangwondo")
 })
-app.get("2023webapp/gwangju", (req,res) => {
+app.get("/gwangju", (req,res) => {
     res.render("home/gwangju")
 })
-app.get("2023webapp/gyeonggido", (req,res) => {
+app.get("/gyeonggido", (req,res) => {
     res.render("home/gyeonggido")
 })
-app.get("2023webapp/gyeongsangbukdo", (req,res) => {
+app.get("/gyeongsangbukdo", (req,res) => {
     res.render("home/gyeongsangbukdo")
 })
-app.get("2023webapp/gyeongsangnamdo", (req,res) => {
+app.get("/gyeongsangnamdo", (req,res) => {
     res.render("home/gyeongsangnamdo")
 })
-app.get("2023webapp/jejudo", (req,res) => {
+app.get("/jejudo", (req,res) => {
     res.render("home/jejudo")
 })
-app.get("2023webapp/Incheon", (req,res) => {
+app.get("/Incheon", (req,res) => {
     res.render("home/Incheon")
 })
-app.get("2023webapp/jeollabukdo", (req,res) => {
+app.get("/jeollabukdo", (req,res) => {
     res.render("home/jeollabukdo")
 })
-app.get("2023webapp/jeollanam_do", (req,res) => {
+app.get("/jeollanam_do", (req,res) => {
     res.render("home/jeollanamdo")
 })
-app.get("2023webapp/sejong", (req,res) => {
+app.get("/sejong", (req,res) => {
     res.render("home/sejong")
 })
-app.get("2023webapp/ulsan", (req,res) => {
+app.get("/ulsan", (req,res) => {
     res.render("home/ulsan")
 })
 

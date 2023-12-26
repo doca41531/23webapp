@@ -149,7 +149,11 @@ a{
 .local-item-restaurant::-webkit-scrollbar{
     display: none;
 }
-
+.local-restaurant-weather{
+    display: flex;
+    font-size: 10px;
+    gap: 10px;
+}
 .local-restaurant-wrap{
     display: flex;
     justify-content: space-around;
