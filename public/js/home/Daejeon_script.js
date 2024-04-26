@@ -1,4 +1,4 @@
-const Daejeonurl = "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=KPSLov8gfQ%2FH5CXnW0ZhjFMnEXhfVqo1Y62P2svRftGHlfiukyVPVRpk27VlCKHLVIQ8%2BqeBI9D3OHHuxUC%2FGw%3D%3D&returnType=json&numOfRows=1&pageNo=1&sidoName=%EB%8C%80%EC%A0%84&ver=1.0"
+const Daejeonurl = "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=VLRChp1oR%2BEhpUBq2PAX%2FrEubZIdjeV03oECYaWYrrEtF1XAlKd9iba%2FcLlkprU0aSTNw%2FD5WZkHNUhBEacrXQ%3D%3D&returnType=json&numOfRows=1&pageNo=1&sidoName=%EB%8C%80%EC%A0%84&ver=1.0"
 const density = document.querySelector(".local-fineDust-today-density");
 const densityState = document.querySelector(".local-fineDust-today-state");
 
